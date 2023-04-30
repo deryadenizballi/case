@@ -12,6 +12,9 @@
     <!-- custom css  -->
     <link rel="stylesheet" href="assets/style.css">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <title>Case</title>
 </head>
 
@@ -19,10 +22,9 @@
 
     <header>
         <div class="header f_between">
-            
-            <nav class="sidebar">
-                
-                <div class="menu-content">
+            <!-- sidebar menu  -->
+            <nav class="sidebar ">
+                <div class="sidebar__content">
                     <ul>
                         <li class="item">
                             <a href="#">Anasayfa</a>
@@ -47,14 +49,33 @@
                         </li>
                     </ul>
 
-                    <div class="menu__content__search f_between">
+                    <div class="sidebar__content__search f_between">
                         <input type="text" placeholder="Ürün Ara">
                         <img src="assets/images/search.svg" alt="search-icon">
+                    </div>
+
+                    <div class="sidebar__contact">
+
+                        <div class="sidebar__contact--account f_column ">
+                            <button class="login-btn">Üye Girişi <span>/</span> </button>
+                            <button class="new-user-btn"> Yeni Hesap Oluştur</button>
+                        </div>
+
+
+                        <div class="sidebar__contact--social ">
+                            <ul>
+                                <li><a href="#"> <img src="assets/images/facebook.png" alt="facebook"></a></li>
+                                <li><a href="#"> <img src="assets/images/twitter.png" alt="twitter"></a></li>
+                                <li><a href="#"> <img src="assets/images/instagram.png" alt="instagram"></a></li>
+                            </ul>
+
+                            <span> <img src="assets/images/sidebar-phone.png" alt="phone-call"> 0216 999 77 00 </span>
+                        </div>
                     </div>
                 </div>
             </nav>
 
-
+            <!-- header top  -->
             <div class="header__logo f_between">
                 <img src="assets/images/logo.png" alt="logo">
                 <button class="header__menu__btn">
@@ -63,11 +84,11 @@
             </div>
 
             <div class="header__contact f_between">
-                 <img src="assets/images/phone.png" alt="phone">
-                 <div class="header__contact__detail f_column">
+                <img src="assets/images/phone.png" alt="phone">
+                <div class="header__contact__detail f_column">
                     <span class="">Soru ve Görüşleriniz İçin Bizi Arayın</span>
                     <span>0 (216) 999 77 00</span>
-                 </div>
+                </div>
             </div>
 
             <div class="header__account f_between">
@@ -84,52 +105,106 @@
                     <img src="assets/images/shop-bag.png" alt="shop-bag">
                 </div>
             </div>
-            
         </div>
+         
+        <!-- slider  -->
+        <section class="header__slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider__box f_between">
+                            <div class="slider__box__text ">
+                                <p>
+                                    <strong>Telefon </strong>yenilemenin en akıllı yolu;
+                                </p>
+
+                                <div class="slider__tab__container">
+                                    <div class="slider_tab">
+                                        <button class="slider__tab__btn active" onclick="openCity('get-phone')">TELEFON
+                                            AL</button>
+                                        <button class="slider__tab__btn" onclick="openCity('sell-phone')">TELEFON
+                                            SAT</button>
+                                        <button class="slider__tab__btn" onclick="openCity('rental-phone')">TELEFON
+                                            KİRALA</button>
+                                    </div>
+
+                                    <div id="get-phone" class="phone">
+                                        <div class="slider__tab__search f_between">
+                                            <input type="text ">
+                                            <span class="f_center">
+                                                <img src="assets/images/search.svg" alt="search">
+                                            </span>
+                                        </div>
+                                        <span><strong>Popüler: </strong> Apple, <span>Samsung</span> </span>
+                                    </div>
+
+                                    <div id="sell-phone" class="phone" style="display:none">
+                                        <h2>TELEFON SAT</h2>
+                                    </div>
+
+                                    <div id="rental-phone" class="phone" style="display:none">
+                                        <h2>TELEFON KİRALA</h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <img src="assets/images/oldu.png" alt="phone">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider__box f_between">
+                            <div class="slider__box__text ">
+                                <p>
+                                    <strong>Telefon </strong>yenilemenin en akıllı yolu;
+                                </p>
+
+                                <div class="slider__tab__container">
+                                    <div class="slider_tab">
+                                        <button class="slider__tab__btn active"
+                                            onclick="openCity('get-a-phone')">TELEFON AL</button>
+                                        <button class="slider__tab__btn" onclick="openCity('sell-a-phone')">TELEFON
+                                            SAT</button>
+                                        <button class="slider__tab__btn" onclick="openCity('rental-a-phone')">TELEFON
+                                            KİRALA</button>
+                                    </div>
+
+                                    <div id="get-a-phone" class="phone">
+                                        <div class="slider__tab__search f_between">
+                                            <input type="text ">
+                                            <span class="f_center">
+                                                <img src="assets/images/search.svg" alt="search">
+                                            </span>
+                                        </div>
+                                        <span><strong>Popüler: </strong> Apple, <span>Samsung</span> </span>
+                                    </div>
+
+                                    <div id="sell-a-phone" class="phone" style="display:none">
+                                        <h2>TELEFON SAT</h2>
+                                    </div>
+
+                                    <div id="rental-a-phone" class="phone" style="display:none">
+                                        <h2>TELEFON KİRALA</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="assets/images/oldu.png" alt="phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </section>
     </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Custom js -->
     <script src="assets/custom.js"></script>
+
 </body>
 
 </html>
